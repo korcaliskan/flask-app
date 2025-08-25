@@ -15,9 +15,8 @@ login_manager.init_app(app)
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-@app.before_first_request
-def create_tables():
-    db.create_all()  # Neon DB’de tabloları oluştur
+with app.app_context():
+    db.create_all()
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
