@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <title>Aidat Takip</title>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('members') }}">Üyeler</a>
+        <a href="{{ url_for('logout') }}">Çıkış</a>
+    </div>
+    <div class="main-content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Üyeler</h2>
+<table border="1">
+<tr><th>İsim</th><th>Toplam Aidat</th></tr>
+{% for member in members %}
+<tr>
+    <td>{{ member.name }}</td>
+    <td>{{ member.aidat_total }} TL</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
